@@ -86,6 +86,11 @@ $('#searchBtn').click(function(e){
 			if (data.length>0) {
 				who = data[0]
 				speakername = who['speakername'];
+
+				if (speakername == 'unknown') {
+					speakername = 'an unknown speaker';
+				}
+
 				mydate = who['date'];
 				myid = ((who['id']).split("/"))[2];
 				newdatestr = formatDate(mydate);
